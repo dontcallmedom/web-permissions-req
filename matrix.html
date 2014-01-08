@@ -98,7 +98,7 @@ Also grants access to information about other available microphones</td>
 <td>Transient overlay</td>
 <td>Through instructions</td>
 <td>Allowed only with specific permission from parent (allowfullscreen attribute)</td>
-<td><code>fullscreenerror</code> event (?)</td>
+<td>watch <code>el.fullscreenenabled</code>; <code>fullscreenerror</code> event if previously rejected</td>
 <td></td>
 </tr>
 <tr>
@@ -109,7 +109,7 @@ Also grants access to information about other available microphones</td>
 <td>Transient overlay</td>
 <td>Through instructions</td>
 <td>Allowed</td>
-<td>@@@</td>
+<td><code>document.pointerLockElement == null</code> ; <code>pointerlockchange</code> event</td>
 <td></td>
 </tr>
 <tr>
