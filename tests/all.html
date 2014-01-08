@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<title>All Permissions at once</title>
+<body>
+<p id="el"></p>
+<button id="request">Click me</button>
+<script>
+if (navigator.getUserMedia === undefined) {
+  navigator.getUserMedia = navigator.mozGetUserMedia || navigator.webkitGetUserMedia;
+}
+
+var voidf = function () {};
+var el = document.getElementById("el");
+var rfs = el.requestFullscreen || el.mozRequestFullScreen || el.webkitRequestFullScreen;
+var rpl = el.requestPointerLock || el.mozRequestPointerLock || el.webkitRequestPointerLock;
+document.getElementById("request").addEventListener("click", function () {
+  navigator.geolocation.getCurrentPosition(voidf, voidf);
+  navigator.getUserMedia({video:true}, voidf, voidf);
+  navigator.getUserMedia({audio:true}, voidf, voidf);
+  rfs.call(el);
+  rpl.call(el);
+  Notification.requestPermission(voidf);
+  if (navigator.webkitPersistentStorage) {
+    navigator.webkitPersistentStorage.requestQuota(25000);
+  }
+//  window.open("hello.html");
+
+}, true);
+</script>
+</body>
