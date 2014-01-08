@@ -1,0 +1,10 @@
+<!doctype html>
+<html>
+<title>Camera and Mike Permission</title>
+<body>
+<script>
+if (navigator.getUserMedia === undefined) {
+  navigator.getUserMedia = navigator.mozGetUserMedia || navigator.webkitGetUserMedia;
+}
+navigator.getUserMedia({video:true, audio:true}, function() {}, function() {});
+</script>

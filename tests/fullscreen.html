@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<title>Fullscreen permission</title>
+<style>
+*:fullscreen {
+ color:white;
+}
+</style>
+<body>
+<p id="fs">Hello World!</p>
+<button id="trigger">Request fullscreen</button>
+<script>
+var fs = document.getElementById("fs");
+var rfs = fs.requestFullscreen || fs.mozRequestFullScreen || fs.webkitRequestFullScreen;
+document.getElementById("trigger").addEventListener("click", function() {rfs.call(fs);}, true);
+
+</script>

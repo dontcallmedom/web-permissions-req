@@ -1,0 +1,10 @@
+<!doctype html>
+<html>
+<title>Camera Permission</title>
+<body>
+<script>
+if (navigator.getUserMedia === undefined) {
+  navigator.getUserMedia = navigator.mozGetUserMedia || navigator.webkitGetUserMedia;
+}
+navigator.getUserMedia({video:true}, function() {}, function() {});
+</script>

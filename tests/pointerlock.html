@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<title>Pointer Lock permission</title>
+<body>
+<p id="pl">Hello World!</p>
+<button id="trigger">Request pointer lock</button>
+<script>
+var pl = document.getElementById("pl");
+var rpl = pl.requestPointerLock || pl.mozRequestPointerLock || pl.webkitRequestPointerLock;
+document.getElementById("trigger").addEventListener("click", function() {rpl.call(pl);}, true);
+
+</script>
