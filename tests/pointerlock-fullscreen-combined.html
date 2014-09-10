@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+<title>Combined Fullscreen and Pointer Lock permission</title>
+<body>
+<p id="pl">Hello World!</p>
+<button id="trigger">Request fullscreen & pointer lock</button>
+<script>
+var pl = document.getElementById("pl");
+var rpl = pl.requestPointerLock || pl.mozRequestPointerLock || pl.webkitRequestPointerLock;
+var rfs = pl.requestFullscreen || pl.mozRequestFullScreen || pl.webkitRequestFullScreen;
+document.getElementById("trigger").addEventListener("click", function() {rfs.call(pl); rpl.call(pl);}, true);
+
+</script>
