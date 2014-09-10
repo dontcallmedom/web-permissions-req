@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<title>Pointer Lock permission without engagement gesture</title>
+<body>
+<p id="pl">Hello World!</p>
+<script>
+var pl = document.getElementById("pl");
+var rpl = pl.requestPointerLock || pl.mozRequestPointerLock || pl.webkitRequestPointerLock;
+rpl.call(pl);
+
+
+</script>
