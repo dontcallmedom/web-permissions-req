@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<title>Fullscreen permission without engagement gesture</title>
+<style>
+*:fullscreen {
+ color:white;
+}
+</style>
+<body>
+<p id="fs">Hello World!</p>
+
+<script>
+var fs = document.getElementById("fs");
+var rfs = fs.requestFullscreen || fs.mozRequestFullScreen || fs.webkitRequestFullScreen;
+rfs.call(fs);
+
+</script>
