@@ -4,7 +4,7 @@ Web APIs that expose sensitive data or hardware features are usually gated by us
 
 That user consent can take several forms, and be exposed to developers through various mechanisms.
 
-This repository collects [examples of these various user consent approaches](tests/) and documents how they are handled by existing browsers via [screenshots](screenshots/).
+This repository collects [examples of these various user consent approaches](tests/) and documents how they are handled by existing browsers via [screenshots](screenshots/). See also the [list of browsable tests](http://dontcallmedom.github.io/web-permissions-req/tests/).
 
 The variety of approaches is [documented in a matrix](http://dontcallmedom.github.io/web-permissions-req/matrix.html) relating APIs with their permission mechanisms analysed through various parameters:
 * type of the consent mechanism (e.g. prompt vs implict user interaction)
